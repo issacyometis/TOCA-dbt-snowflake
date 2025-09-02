@@ -4,22 +4,9 @@ models:
     - name: stg_input__Time_Periods
       config:
         materialized: table
-        database: "base"
-        schema: inputs
     - name: stg_inputs__end_of_day
-      config:
-        database: "base"
-        schema: inputs
     - name: stg_inputs__manager_comments
-      config:
-        database: "base"
-        schema: inputs
     - name: stg_input__booking_source
-      config:
-        database: "base"
-        schema: inputs
     - name: stg_inputs__google_form_response
       config:
         materialized: table
-        database: "base"
-        schema: inputs

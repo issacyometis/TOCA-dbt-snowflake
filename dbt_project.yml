@@ -37,9 +37,50 @@ seeds:
 
 models:
   toca-social-dw:
+    base:
+      +database: "{% if target.name == 'dev' %}base_dev{% elif target.name == 'UAT' %}base_uat{% elif target.name == 'prod' %}base_prod{% else %}invalid_database{% endif %}"
+      +materialized: view
+      sevenrooms:
+        +schema: "sevenrooms"
+      people_counter:
+        +schema: "people_counter"
+
+    intermediate:
+      +database: "{% if target.name == 'dev' %}dw_dev{% elif target.name == 'UAT' %}dw_uat{% elif target.name == 'prod' %}dw_prod{% else %}invalid_database{% endif %}"
+      +materialized: table
+      intermediate:
+        +schema: "intermediate"     
+
     marts:
+      +database: "{% if target.name == 'dev' %}dw_dev{% elif target.name == 'UAT' %}dw_uat{% elif target.name == 'prod' %}dw_prod{% else %}invalid_database{% endif %}"
       core:
         materialized: table
-        database: "dw_prod"
         schema: CORE
 
+    replicate:
+        +materialized: TOCA_DATA_REPLICATION
+        +database: "dw_prod"
+        +schema: sevenrooms
+
+    staging:
+      +database: "{% if target.name == 'dev' %}base_dev{% elif target.name == 'UAT' %}base_uat{% elif target.name == 'prod' %}base{% else %}invalid_database{% endif %}"
+      +materialized: view
+      bookings:
+        +schema: "bookings"
+      budget:
+        +schema: "budget"
+      epos:
+        +schema: "epos"
+      gaming:
+        +schema: "gaming"
+      inputs:
+        +schema: "inputs"
+      people_counter:
+        +schema: "people_counter"
+      sentiment:
+        +schema: "sentiment"
+      sevenrooms:
+        +schema: "sevenrooms"
+        +materialized: table
+      stripe:
+        +schema: "stripe"                                                                

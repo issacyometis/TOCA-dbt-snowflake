@@ -2,17 +2,5 @@ version: 2
 
 models:
     - name: stg_sevenrooms__reservations
-      config:
-        materialized: table
-        database: "base"
-        schema: sevenrooms
     - name: stg_sevenrooms__clients
-      config:
-        materialized: table
-        database: "base"
-        schema: sevenrooms
     - name: stg_sevenrooms__charges
-      config:
-        materialized: table
-        database: "base"
-        schema: sevenrooms

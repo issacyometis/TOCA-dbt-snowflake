@@ -2,9 +2,6 @@ version: 2
 
 models:
     - name: stg_gaming__cv_status
-      config:
-        database: "base"
-        schema: gaming
       description: base model for cv status data
       columns:
         - name: cv_status_id
@@ -26,9 +23,6 @@ models:
             - not_null
     
     - name: stg_gaming__game_command
-      config:
-        database: "base"
-        schema: gaming
       description: base model for game command data
       columns:
         - name: game_command_id
@@ -50,9 +44,6 @@ models:
             - not_null
 
     - name: stg_gaming__game_status
-      config:
-        database: "base"
-        schema: gaming
       description: base model for game command data
       columns:
         - name: game_status_id

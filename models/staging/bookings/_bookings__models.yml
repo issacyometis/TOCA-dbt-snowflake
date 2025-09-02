@@ -2,37 +2,20 @@ version: 2
 
 models:
     - name: stg_booking__booking_customer
-      config:
-        database: "base"
-        schema: bookings
+
     - name: stg_booking__package
-      config:
-        database: "base"
-        schema: bookings
+
     - name: stg_booking__category
-      config:
-        database: "base"
-        schema: bookings
+
     - name: stg_booking__bookings
-      config:
-        database: "base"
-        schema: bookings
+
     - name: stg_booking__booking_box
-      config:
-        database: "base"
-        schema: bookings
+
     - name: stg_booking__booking_venue
-      config:
-        database: "base"
-        schema: bookings
+
     - name: stg_booking__booking_box_booking
-      config:
-        database: "base"
-        schema: bookings
+
     - name: stg_booking__payment
-      config:
-        database: "base"
-        schema: bookings        
       columns:
         - name: Booking_reference
           tests:

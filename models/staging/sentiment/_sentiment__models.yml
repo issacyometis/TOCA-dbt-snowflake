@@ -3,8 +3,3 @@ version: 2
 models:
 
     - name: stg_sentiment__sentiment_tahola
-      config:
-        database: "base"
-        schema: sentiment
-   
-
