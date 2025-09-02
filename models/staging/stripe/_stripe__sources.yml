@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+    - name: stripe
+      description: data from thier strip payment system
+      database: raw
+      schema: stripe
+      loader: Hevo
+      loaded_at_field: __hevo__loaded_at
+
+      tables:
+        - name: balance_transaction
+        - name: charge
+        - name: refund
+        - name: payout

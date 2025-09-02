@@ -1,0 +1,23 @@
+version: 2
+
+models:
+    - name: base_sevenrooms__reservations
+      config:
+        materialized: view
+        database: "base"
+        schema: sevenrooms
+    - name: base_sevenrooms__clients
+      config:
+        materialized: view
+        database: "base"
+        schema: sevenrooms
+    - name: base_sevenrooms__charges
+      config:
+        materialized: view
+        database: "base"
+        schema: sevenrooms
+    - name: base_people_counter__people_count_by_zone_api
+      config:
+        materialized: view
+        database: "base"
+        schema: people_counter

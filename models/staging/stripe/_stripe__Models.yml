@@ -1,0 +1,19 @@
+version: 2
+
+models:
+    - name: stg_stripe__balance_transactions
+      config:
+        database: "base"
+        schema: stripe
+    - name: stg_stripe__charge
+      config:
+        database: "base"
+        schema: stripe
+    - name: stg_stripe__refund
+      config:
+        database: "base"
+        schema: stripe
+    - name: stg_stripe__payout
+      config:
+        database: "base"
+        schema: stripe

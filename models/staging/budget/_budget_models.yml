@@ -1,0 +1,23 @@
+version: 2
+
+models:
+    - name: stg_budget_budget
+      config:
+        database: "base"
+        schema: budget
+      description: Budgets Data
+    - name: stg_budget_budget_birmingham
+      config:
+        database: "base"
+        schema: budget
+      description: Budgets Data
+    - name: stg_live_budgets
+      config:
+        database: "base"
+        schema: budget
+      description: Live Budget Data
+    - name: stg_base_budgets
+      config:
+        database: "base"
+        schema: budget
+      description: Base Budget Data

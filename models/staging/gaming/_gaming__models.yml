@@ -1,0 +1,74 @@
+version: 2
+
+models:
+    - name: stg_gaming__cv_status
+      config:
+        database: "base"
+        schema: gaming
+      description: base model for cv status data
+      columns:
+        - name: cv_status_id
+          description: the primary key for this table
+          tests:
+            - unique
+            - not_null
+        - name: venue_id
+          description: the id of the venue
+          tests:
+            - not_null
+        - name: box_id
+          description: the id of the box at the venue
+          tests:
+            - not_null
+        - name: booking_reference
+          description: the booking reference. Links to the booking data
+          tests:
+            - not_null
+    
+    - name: stg_gaming__game_command
+      config:
+        database: "base"
+        schema: gaming
+      description: base model for game command data
+      columns:
+        - name: game_command_id
+          description: the primary key for this table
+          tests:
+            - unique
+            - not_null
+        - name: venue_id
+          description: the id of the venue
+          tests:
+            - not_null
+        - name: box_id
+          description: the id of the box at the venue
+          tests:
+            - not_null
+        - name: booking_reference
+          description: the booking reference. Links to the booking data
+          tests:
+            - not_null
+
+    - name: stg_gaming__game_status
+      config:
+        database: "base"
+        schema: gaming
+      description: base model for game command data
+      columns:
+        - name: game_status_id
+          description: the primary key for this table
+          tests:
+            - unique
+            - not_null
+        - name: venue_id
+          description: the id of the venue
+          tests:
+            - not_null
+        - name: box_id
+          description: the id of the box at the venue
+          tests:
+            - not_null
+        - name: booking_reference
+          description: the booking reference. Links to the booking data
+          tests:
+            - not_null

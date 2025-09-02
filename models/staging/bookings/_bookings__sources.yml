@@ -1,0 +1,36 @@
+version: 2
+
+sources:
+    - name: Booking_Customers
+      description: This Stores the Customer details of the booking
+      database: raw
+      schema: BOOKINGS_CUSTOMERS
+      loader: Hevo
+      loaded_at_field: __hevo__loaded_at
+
+      tables:
+        - name: TAHOLA_TOCA_AUTH_TOKEN
+          description: Contains the Customer Details of the Bookings
+        
+    - name: Booking
+      description: This Stores the Customer details of the booking
+      database: raw
+      schema: BOOKINGS
+      loader: Hevo
+      loaded_at_field: __hevo__loaded_at
+
+      tables:
+        - name: TOCA_BOOKINGS_BOOKING
+          description: Contains Booking Details
+        - name: TOCA_PACKAGES_PACKAGE
+          description: Contains Package Details
+        - name: TOCA_PACKAGES_CATEGORY
+          description: Contains Package Category Details
+        - name: TOCA_BOOKINGS_BOX
+          description: Contains BOX Details
+        - name: TOCA_BOOKINGS_VENUE
+          description: Contains Venue Details
+        - name: TOCA_BOOKINGS_BOX_BOOKING
+          description: Contains the Booking details for each box
+        - name: TOCA_PAYMENTS_PAYMENT
+          description: Contains the payments details for each box          

@@ -1,0 +1,41 @@
+version: 2
+
+models:
+    - name: stg_booking__booking_customer
+      config:
+        database: "base"
+        schema: bookings
+    - name: stg_booking__package
+      config:
+        database: "base"
+        schema: bookings
+    - name: stg_booking__category
+      config:
+        database: "base"
+        schema: bookings
+    - name: stg_booking__bookings
+      config:
+        database: "base"
+        schema: bookings
+    - name: stg_booking__booking_box
+      config:
+        database: "base"
+        schema: bookings
+    - name: stg_booking__booking_venue
+      config:
+        database: "base"
+        schema: bookings
+    - name: stg_booking__booking_box_booking
+      config:
+        database: "base"
+        schema: bookings
+    - name: stg_booking__payment
+      config:
+        database: "base"
+        schema: bookings        
+      columns:
+        - name: Booking_reference
+          tests:
+            - unique
+
+          description: One payment per booking reference as at 9Dec2022 RG Also there are 2 NULL values

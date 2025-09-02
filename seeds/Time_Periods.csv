@@ -1,0 +1,169 @@
+DAY,HOUR,PERIOD_TYPE,PERIOD_SORT,HOURS_AVAILABLE
+Monday,9,Off Peak,1,0
+Monday,10,Off Peak,2,0
+Monday,11,Off Peak,3,17
+Monday,12,Off Peak,4,17
+Monday,13,Off Peak,5,17
+Monday,14,Off Peak,6,17
+Monday,15,Off Peak,7,17
+Monday,16,Peak,8,17
+Monday,17,Peak,9,17
+Monday,18,Peak,10,17
+Monday,19,Peak,11,17
+Monday,20,Peak,12,17
+Monday,21,Peak,13,17
+Monday,22,Peak,14,17
+Monday,23,Late Off Peak,15,17
+Monday,0,Late Off Peak,16,0
+Monday,1,Late Off Peak,17,0
+Monday,2,Late Off Peak,18,0
+Monday,3,Late Off Peak,19,0
+Monday,4,Late Off Peak,20,0
+Monday,5,Late Off Peak,21,0
+Monday,6,Late Off Peak,22,0
+Monday,7,Late Off Peak,23,0
+Monday,8,Late Off Peak,24,0
+Tuesday,9,Off Peak,1,0
+Tuesday,10,Off Peak,2,0
+Tuesday,11,Off Peak,3,17
+Tuesday,12,Off Peak,4,17
+Tuesday,13,Off Peak,5,17
+Tuesday,14,Off Peak,6,17
+Tuesday,15,Off Peak,7,17
+Tuesday,16,Peak,8,17
+Tuesday,17,Peak,9,17
+Tuesday,18,Peak,10,17
+Tuesday,19,Peak,11,17
+Tuesday,20,Peak,12,17
+Tuesday,21,Peak,13,17
+Tuesday,22,Peak,14,17
+Tuesday,23,Late Off Peak,15,17
+Tuesday,0,Late Off Peak,16,0
+Tuesday,1,Late Off Peak,17,0
+Tuesday,2,Late Off Peak,18,0
+Tuesday,3,Late Off Peak,19,0
+Tuesday,4,Late Off Peak,20,0
+Tuesday,5,Late Off Peak,21,0
+Tuesday,6,Late Off Peak,22,0
+Tuesday,7,Late Off Peak,23,0
+Tuesday,8,Late Off Peak,24,0
+Wednesday,9,Off Peak,1,0
+Wednesday,10,Off Peak,2,0
+Wednesday,11,Off Peak,3,17
+Wednesday,12,Off Peak,4,17
+Wednesday,13,Off Peak,5,17
+Wednesday,14,Off Peak,6,17
+Wednesday,15,Off Peak,7,17
+Wednesday,16,Peak,8,17
+Wednesday,17,Peak,9,17
+Wednesday,18,Peak,10,17
+Wednesday,19,Peak,11,17
+Wednesday,20,Peak,12,17
+Wednesday,21,Peak,13,17
+Wednesday,22,Peak,14,17
+Wednesday,23,Late Off Peak,15,17
+Wednesday,0,Late Off Peak,16,0
+Wednesday,1,Late Off Peak,17,0
+Wednesday,2,Late Off Peak,18,0
+Wednesday,3,Late Off Peak,19,0
+Wednesday,4,Late Off Peak,20,0
+Wednesday,5,Late Off Peak,21,0
+Wednesday,6,Late Off Peak,22,0
+Wednesday,7,Late Off Peak,23,0
+Wednesday,8,Late Off Peak,24,0
+Thursday,9,Off Peak,1,0
+Thursday,10,Off Peak,2,0
+Thursday,11,Off Peak,3,17
+Thursday,12,Off Peak,4,17
+Thursday,13,Off Peak,5,17
+Thursday,14,Off Peak,6,17
+Thursday,15,Off Peak,7,17
+Thursday,16,Peak,8,17
+Thursday,17,Peak,9,17
+Thursday,18,Peak,10,17
+Thursday,19,Peak,11,17
+Thursday,20,Peak,12,17
+Thursday,21,Peak,13,17
+Thursday,22,Peak,14,17
+Thursday,23,Late Off Peak,15,17
+Thursday,0,Late Off Peak,16,0
+Thursday,1,Late Off Peak,17,0
+Thursday,2,Late Off Peak,18,0
+Thursday,3,Late Off Peak,19,0
+Thursday,4,Late Off Peak,20,0
+Thursday,5,Late Off Peak,21,0
+Thursday,6,Late Off Peak,22,0
+Thursday,7,Late Off Peak,23,0
+Thursday,8,Late Off Peak,24,0
+Friday,9,Off Peak,1,0
+Friday,10,Off Peak,2,0
+Friday,11,Off Peak,3,17
+Friday,12,Off Peak,4,17
+Friday,13,Off Peak,5,17
+Friday,14,Off Peak,6,17
+Friday,15,Off Peak,7,17
+Friday,16,Super Peak,8,17
+Friday,17,Super Peak,9,17
+Friday,18,Super Peak,10,17
+Friday,19,Super Peak,11,17
+Friday,20,Super Peak,12,17
+Friday,21,Super Peak,13,17
+Friday,22,Super Peak,14,17
+Friday,23,Late Off Peak,15,17
+Friday,0,Late Off Peak,16,17
+Friday,1,Late Off Peak,17,0
+Friday,2,Late Off Peak,18,0
+Friday,3,Late Off Peak,19,0
+Friday,4,Late Off Peak,20,0
+Friday,5,Late Off Peak,21,0
+Friday,6,Late Off Peak,22,0
+Friday,7,Late Off Peak,23,0
+Friday,8,Late Off Peak,24,0
+Saturday,9,Off Peak,1,17
+Saturday,10,Off Peak,2,17
+Saturday,11,Super Peak,3,17
+Saturday,12,Super Peak,4,17
+Saturday,13,Super Peak,5,17
+Saturday,14,Super Peak,6,17
+Saturday,15,Super Peak,7,17
+Saturday,16,Super Peak,8,17
+Saturday,17,Super Peak,9,17
+Saturday,18,Super Peak,10,17
+Saturday,19,Super Peak,11,17
+Saturday,20,Super Peak,12,17
+Saturday,21,Super Peak,13,17
+Saturday,22,Super Peak,14,17
+Saturday,23,Late Off Peak,15,17
+Saturday,0,Late Off Peak,16,17
+Saturday,1,Late Off Peak,17,0
+Saturday,2,Late Off Peak,18,0
+Saturday,3,Late Off Peak,19,0
+Saturday,4,Late Off Peak,20,0
+Saturday,5,Late Off Peak,21,0
+Saturday,6,Late Off Peak,22,0
+Saturday,7,Late Off Peak,23,0
+Saturday,8,Late Off Peak,24,0
+Sunday,9,Off Peak,1,17
+Sunday,10,Off Peak,2,17
+Sunday,11,Super Peak,3,17
+Sunday,12,Super Peak,4,17
+Sunday,13,Super Peak,5,17
+Sunday,14,Super Peak,6,17
+Sunday,15,Super Peak,7,17
+Sunday,16,Late Off Peak,8,17
+Sunday,17,Late Off Peak,9,17
+Sunday,18,Late Off Peak,10,17
+Sunday,19,Late Off Peak,11,17
+Sunday,20,Late Off Peak,12,17
+Sunday,21,Late Off Peak,13,17
+Sunday,22,Late Off Peak,14,17
+Sunday,23,Late Off Peak,15,17
+Sunday,0,Late Off Peak,16,0
+Sunday,1,Late Off Peak,17,0
+Sunday,2,Late Off Peak,18,0
+Sunday,3,Late Off Peak,19,0
+Sunday,4,Late Off Peak,20,0
+Sunday,5,Late Off Peak,21,0
+Sunday,6,Late Off Peak,22,0
+Sunday,7,Late Off Peak,23,0
+Sunday,8,Late Off Peak,24,0

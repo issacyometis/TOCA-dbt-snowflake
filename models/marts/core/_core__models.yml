@@ -1,0 +1,256 @@
+version: 2
+
+models:
+  - name: dim_date
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_product
+    decription: product dimension table
+    columns:
+      - name: Product_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_location
+    decription: Location dimension table
+    columns:
+      - name: Location_Key
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE     
+  - name: fact_game_command
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_game_detail
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_game_summary
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_budget
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_budget_base
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_sentiment     
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_google_reviews      
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_transaction
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: vfact_game_player_summary
+    config:
+      materialized: view
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: vfact_game_booking_summary
+    config:
+      materialized: view
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_booking_package
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_box
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_customer
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_booking_source
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_booking_status
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_booking_type
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_booking
+    tests:
+      - relationships:
+          to: ref('dim_booking_source')
+          field: Booking_Source_Key
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_payment_provider
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_payment
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE      
+  - name: fact_tender
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE      
+  - name: dim_day_time_period
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE 
+  - name: dim_tender
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE 
+  - name: fact_people_counter
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE 
+  - name: fact_manager_comments
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE 
+  - name: fact_balance
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_payout
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE 
+  - name: vfact_game_times
+    config:
+      materialized: view
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: vfact_game_start
+    config:
+      materialized: view
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: vfact_toca_challenge
+    config:
+      materialized: view
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: vfact_game_shots
+    config:
+      materialized: view
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: vfact_game_Power_Ups
+    config:
+      materialized: view
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: vfact_game_matrix
+    config:
+      materialized: view
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: vfact_game_player_count
+    config:
+      materialized: view
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: vfact_toca_challenge_stats
+    config:
+      materialized: view
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_sevenrooms
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_sevenrooms_payments
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_booking_combined
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_sevenrooms_customer
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_customers_combined
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_box_bookings_combined
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: dim_business_drivers
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_sevenrooms_upgrades
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: tbl_sevenrooms_tags
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE
+  - name: fact_bookings_sevenrooms
+    config:
+      materialized: table
+      database: "{{ env_var('DBT_DWDB_NAME') }}"
+      schema: CORE

@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+    - name: budget
+      description: This stores all data from the budgets
+      database: raw
+      schema: budget
+      loader: Hevo
+      loaded_at_field: __hevo__loaded_at
+
+      tables:
+        - name: DAILY_BUDGETS
+          description: Contains the budgets
+        - name: BUDGETS_BIRM2024
+        - name: BUDGETS_LIVE_BUDGETS
+        - name: BUDGETS_BASEBUDGETS
+        

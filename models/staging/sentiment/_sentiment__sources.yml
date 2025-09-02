@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+       
+    - name: sentiment
+      description: This Stores the sentiment details
+      database: raw
+      schema: sentiment
+      tables:
+        - name: SENTIMENT_TAHOLA
+          description: Contains sentiment details

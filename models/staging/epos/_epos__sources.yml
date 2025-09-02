@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+    - name: epos
+      description: This stores all data from the Epos System
+      database: raw
+      schema: TEVALIS
+      loader: Hevo
+      loaded_at_field: __hevo__loaded_at
+
+      tables:
+        - name: sales_api
+          description: Contains the till Sales & Discounts
+        - name: product_api
+          description: Contains the product information
+        - name: TENDER_TYPE_API
+          description: Contains the Tender Type information
+        

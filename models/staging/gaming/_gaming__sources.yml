@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+    - name: gaming
+      description: This stores all data from the gaming system
+      database: raw
+      schema: gaming
+      loader: Hevo
+      loaded_at_field: __hevo__loaded_at
+
+      tables:
+        - name: cv_status
+          description: Contains computer vision data on ball movement etc
+        - name: game_command
+          description: Contains game activation and termination events etc
+        - name: game_status
+          description: Contains detailed game events

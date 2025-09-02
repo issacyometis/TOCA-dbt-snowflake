@@ -1,0 +1,29 @@
+with
+    cte_source_gamesdetail as (select * from {{ ref("fact_game_detail") }}),
+    cte_source_games as (select * from {{ ref("games") }}),
+
+    cte_main as (
+
+        select
+Distinct
+            gd.sk_site,
+            gd.booking_reference as reference,
+            gd.event_date as event_date,
+            gd.game_id,
+            g.game_name,
+            gd.game_mode,
+            gd.game_type,
+            DATE_PART(  HOUR, gd.message_time ) as Message_Hour,
+            gd.box_id,
+            gd.difficulty,
+            gd.difficulty_name
+           
+        from cte_source_gamesdetail as gd
+        left outer join cte_source_games as g on gd.game_id = g.game_id
+        where  gd.game_id <> 'DEMOMODE'
+        
+
+    )
+
+select *
+from cte_main

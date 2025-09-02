@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+    - name: people_counter
+      description: This stores all data from the people counter system
+      database: raw
+      schema: people_counter
+      loader: Hevo
+      loaded_at_field: __hevo__loaded_at
+
+      tables:
+        - name: PEOPLE_COUNT_BY_ZONE_API

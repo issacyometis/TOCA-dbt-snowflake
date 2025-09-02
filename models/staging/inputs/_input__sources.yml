@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+    - name: inputs
+      description: Tahola loaded tables
+      database: raw
+      schema: inputs
+      loader: Hevo
+      loaded_at_field: __hevo__loaded_at
+
+      tables:
+        - name: end_of_day
+          description: Loaded from End of day process
+        - name: MANAGER_COMMENTS_DAILY_SNAPSHOT_COMMENTS
+          description: Comments for the daily reports. 
+        - name: TOCA_BUSINESS_DRIVERS_SHEET1
+          description: Business drivers for TOCA
+        - name: GOOGLE_FORMS
+          description: new table loading a json file containing the google comments which has been extracted to a S3bucket
+    - name: seeds
+      description: Tahola loaded tables
+      database: BASE
+      schema: INPUTS
+      loader: Hevo
+      loaded_at_field: __hevo__loaded_at
+
+      tables:
+      - name: BOOKINGSOURCE
+        description: Booking Source Mapping. 
+
+
+
+
+          
