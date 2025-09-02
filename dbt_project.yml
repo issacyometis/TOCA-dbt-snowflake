@@ -54,8 +54,8 @@ models:
     marts:
       +database: "{% if target.name == 'dev' %}dw_dev{% elif target.name == 'UAT' %}dw_uat{% elif target.name == 'prod' %}dw_prod{% else %}invalid_database{% endif %}"
       core:
-        materialized: table
-        schema: CORE
+        +materialized: table
+        +schema: "CORE"
 
     replicate:
         +materialized: TOCA_DATA_REPLICATION
@@ -83,4 +83,4 @@ models:
         +schema: "sevenrooms"
         +materialized: table
       stripe:
-        +schema: "stripe"                                                                
+        +schema: "stripe"

@@ -10,3 +10,4 @@ models:
     - name: stg_inputs__google_form_response
       config:
         materialized: table
+    - name: stg_inputs__business_driver
