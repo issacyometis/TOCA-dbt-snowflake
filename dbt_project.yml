@@ -31,12 +31,12 @@ vars:
   switch_date: to_date('2024-01-18')
 
 seeds:
-  toca-social-dw:
+  toca_social_dw:
     +database: BASE
     +schema: Inputs
 
 models:
-  toca-social-dw:
+  toca_social_dw:
     base:
       +database: "{% if target.name == 'dev' %}base_dev{% elif target.name == 'UAT' %}base_uat{% elif target.name == 'prod' %}base_prod{% else %}invalid_database{% endif %}"
       +materialized: view

@@ -1,5 +1,4 @@
 version: 2
 
 models:
-
     - name: stg_sentiment__sentiment_tahola
