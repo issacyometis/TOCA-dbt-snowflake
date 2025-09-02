@@ -7,7 +7,13 @@
 
     {%- else -%}
 
-        {{ custom_schema_name | trim }}
+        {%- if target.schema == 'PROD' -%}
+            {{ custom_schema_name | trim }}
+            
+        {%- else -%}    
+            {{ default_schema }}_{{ custom_schema_name | trim }}
+
+        {%- endif -%}
 
     {%- endif -%}
 

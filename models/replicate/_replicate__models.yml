@@ -15,4 +15,4 @@ models:
       config:
         materialized: table
         database: "TOCA_DATA_REPLICATION"
-        schema: sevenrooms
+        schema: sevenrooms    

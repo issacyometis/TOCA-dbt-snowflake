@@ -58,12 +58,12 @@ models:
         +schema: "CORE"
 
     replicate:
-        +materialized: TOCA_DATA_REPLICATION
-        +database: "dw_prod"
+        +database: "TOCA_DATA_REPLICATION"
+        +materialized: table
         +schema: sevenrooms
 
     staging:
-      +database: "{% if target.name == 'dev' %}base_dev{% elif target.name == 'UAT' %}base_uat{% elif target.name == 'prod' %}base{% else %}invalid_database{% endif %}"
+      +database: "{% if target.name == 'dev' %}BASE_DEV{% elif target.name == 'UAT' %}BASE_UAT{% elif target.name == 'prod' %}BASE{% else %}invalid_database{% endif %}"
       +materialized: view
       bookings:
         +schema: "bookings"
@@ -75,7 +75,7 @@ models:
         +schema: "gaming"
       inputs:
         +schema: "inputs"
-      people_counter:
+      peoplecounter:
         +schema: "people_counter"
       sentiment:
         +schema: "sentiment"

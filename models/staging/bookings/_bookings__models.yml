@@ -2,19 +2,12 @@ version: 2
 
 models:
     - name: stg_booking__booking_customer
-
     - name: stg_booking__package
-
     - name: stg_booking__category
-
     - name: stg_booking__bookings
-
     - name: stg_booking__booking_box
-
     - name: stg_booking__booking_venue
-
     - name: stg_booking__booking_box_booking
-
     - name: stg_booking__payment
       columns:
         - name: Booking_reference
